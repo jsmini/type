@@ -29,7 +29,7 @@
 通过npm下载安装代码
 
 ```bash
-$ npm install --save-dev @yanhaijing/type_js
+$ npm install --save @yanhaijing/type_js
 ```
 
 如果你是node环境

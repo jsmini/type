@@ -29,13 +29,13 @@
 通过npm下载安装代码
 
 ```bash
-$ npm install --save-dev type_js
+$ npm install --save-dev @yanhaijing/type_js
 ```
 
 如果你是node环境
 
 ```js
-var type = require('type_js').type;
+var type = require('@yanhaijing/type_js').type;
 
 type(1) // 'number'
 type(true) // 'boolean'
@@ -44,7 +44,7 @@ type(true) // 'boolean'
 如果你是webpack等环境
 
 ```js
-import { type } from 'type_js';
+import { type } from '@yanhaijing/type_js';
 
 type(1) // 'number'
 type(true) // 'boolean'
@@ -53,7 +53,7 @@ type(true) // 'boolean'
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/type_js/dist/index.aio.js'], function (type_js) {
+requirejs(['node_modules/@yanhaijing/type_js/dist/index.aio.js'], function (type_js) {
     var type = type_js.type;
 
     type(1) // 'number'
@@ -64,7 +64,7 @@ requirejs(['node_modules/type_js/dist/index.aio.js'], function (type_js) {
 如果你是浏览器环境
 
 ```html
-<script src="node_modules/type_js/dist/index.aio.js"></script>
+<script src="node_modules/@yanhaijing/type_js/dist/index.aio.js"></script>
 
 <script>
     var type = type_js.type;
@@ -105,7 +105,7 @@ $ npm run release
 将新版本发布到npm
 
 ```bash
-$ npm publish
+$ npm publish --access=public
 ```
 
 可能需要你自己修改的地方如下：

@@ -1,3 +1,5 @@
+'use strict';
+
 var expect = require('expect.js');
 
 var type = require('../dist/index.js').type;

@@ -1,4 +1,4 @@
-# [type.js](https://github.com/yanhaijing/type.js) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/type.js) [![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/@yanhaijing/type_js) [![Build Status](https://travis-ci.org/yanhaijing/type.js.svg?branch=master)](https://travis-ci.org/yanhaijing/type.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/type.js/blob/master/LICENSE)
+# [type.js](https://github.com/yanhaijing/type.js) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.1.0-orange.svg)](https://www.npmjs.com/package/@yanhaijing/type_js) [![Build Status](https://travis-ci.org/yanhaijing/type.js.svg?branch=master)](https://travis-ci.org/yanhaijing/type.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/type.js/blob/master/LICENSE)
 类型检测库，弥补typeof的问题
 
 ## 兼容性
@@ -75,7 +75,7 @@ requirejs(['node_modules/@yanhaijing/type_js/dist/index.aio.js'], function (type
 ```
 
 ## 文档
-[API](./doc/api.md)
+[API](https://github.com/yanhaijing/type.js/blob/master/doc/api.md)
 
 ## 贡献指南
 首次运行需要先安装依赖
@@ -116,9 +116,9 @@ $ npm publish --access=public
 - test/browser/index.html 中的仓库名称
 
 ## 更新日志
-[CHANGELOG.md](./CHANGELOG.md)
+[CHANGELOG.md](https://github.com/yanhaijing/type.js/blob/master/CHANGELOG.md)
 
 ## 计划列表
-[TODO.md](./TODO.md)
+[TODO.md](https://github.com/yanhaijing/type.js/blob/master/TODO.md)
 
 ## 谁在使用

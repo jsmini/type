@@ -22,8 +22,6 @@ type.js借助内部的[class]来给绝大部分数据类型做出正确的类型
 - math
 - promise
 
-**注意：**编译代码依赖ES5环境，对于ie6-8需要引入[es5-shim](http://github.com/es-shims/es5-shim/)才可以兼容，可以查看[demo/demo-global.html](../demo/demo-global.html)中的例子
-
 ## type
 type函数的参数和返回类型入选：
 

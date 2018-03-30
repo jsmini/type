@@ -13,8 +13,8 @@ export default {
         banner: common.banner,
     },
     plugins: [
-        babel({
-            exclude: 'node_modules/**'
-        })
+        // babel({
+        //     exclude: 'node_modules/**'
+        // })
     ]
 };

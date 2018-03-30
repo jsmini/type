@@ -23,8 +23,8 @@ export default {
         commonjs({
             include: 'node_modules/**',
         }),
-        babel({
-            exclude: 'node_modules/**'
-        })
+        // babel({
+        //     exclude: 'node_modules/**'
+        // })
     ]
 };

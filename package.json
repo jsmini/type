@@ -1,6 +1,6 @@
 {
   "name": "@yanhaijing/type_js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "类型检测库，弥补typeof的问题",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
@@ -27,7 +27,6 @@
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-preset-env": "1.6.1",
-    "es5-shim": "4.5.10",
     "eslint": "4.18.2",
     "expect.js": "0.3.1",
     "mocha": "3.5.3",

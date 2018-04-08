@@ -1,4 +1,4 @@
-# [type.js](https://github.com/yanhaijing/type.js) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.3.0-orange.svg)](https://www.npmjs.com/package/@yanhaijing/type_js) [![Build Status](https://travis-ci.org/yanhaijing/type.js.svg?branch=master)](https://travis-ci.org/yanhaijing/type.js) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yanhaijing/type.js/blob/master/LICENSE)
+# [type](https://github.com/jsmini/type) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.3.0-orange.svg)](https://www.npmjs.com/package/@jsmini/type) [![Build Status](https://travis-ci.org/jsmini/type.svg?branch=master)](https://travis-ci.org/jsmini/type) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/type/blob/master/LICENSE)
 类型检测库，弥补typeof的问题，原生兼容IE6
 
 ## 兼容性
@@ -29,13 +29,13 @@
 通过npm下载安装代码
 
 ```bash
-$ npm install --save @yanhaijing/type_js
+$ npm install --save @jsmini/type
 ```
 
 如果你是node环境
 
 ```js
-var type = require('@yanhaijing/type_js').type;
+var type = require('@jsmini/type').type;
 
 type(1) // 'number'
 type(true) // 'boolean'
@@ -44,7 +44,7 @@ type(true) // 'boolean'
 如果你是webpack等环境
 
 ```js
-import { type } from '@yanhaijing/type_js';
+import { type } from '@jsmini/type';
 
 type(1) // 'number'
 type(true) // 'boolean'
@@ -53,8 +53,8 @@ type(true) // 'boolean'
 如果你是requirejs环境
 
 ```js
-requirejs(['node_modules/@yanhaijing/type_js/dist/index.aio.js'], function (type_js) {
-    var type = type_js.type;
+requirejs(['node_modules/@jsmini/type/dist/index.aio.js'], function (jsmini_type) {
+    var type = jsmini_type.type;
 
     type(1) // 'number'
     type(true) // 'boolean'
@@ -64,10 +64,10 @@ requirejs(['node_modules/@yanhaijing/type_js/dist/index.aio.js'], function (type
 如果你是浏览器环境
 
 ```html
-<script src="node_modules/@yanhaijing/type_js/dist/index.aio.js"></script>
+<script src="node_modules/@jsmini/type/dist/index.aio.js"></script>
 
 <script>
-    var type = type_js.type;
+    var type = jsmini_type.type;
 
     type(1) // 'number'
     type(true) // 'boolean'
@@ -75,7 +75,7 @@ requirejs(['node_modules/@yanhaijing/type_js/dist/index.aio.js'], function (type
 ```
 
 ## 文档
-[API](https://github.com/yanhaijing/type.js/blob/master/doc/api.md)
+[API](https://github.com/jsmini/type/blob/master/doc/api.md)
 
 ## 贡献指南
 首次运行需要先安装依赖
@@ -116,9 +116,9 @@ $ npm publish --access=public
 - test/browser/index.html 中的仓库名称
 
 ## 更新日志
-[CHANGELOG.md](https://github.com/yanhaijing/type.js/blob/master/CHANGELOG.md)
+[CHANGELOG.md](https://github.com/jsmini/type/blob/master/CHANGELOG.md)
 
 ## 计划列表
-[TODO.md](https://github.com/yanhaijing/type.js/blob/master/TODO.md)
+[TODO.md](https://github.com/jsmini/type/blob/master/TODO.md)
 
 ## 谁在使用

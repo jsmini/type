@@ -1,15 +1,15 @@
 var pkg = require('../package.json');
 
-// 兼容 type.js 和 @yanhaijing/type.js 
-var name = pkg.name.split('/').pop();
+// 兼容 type 和 @jsmini/type 
+var name = pkg.name.replace('@', '').replace(/\//g, '_');
 var version = pkg.version;
 
 var banner = 
 `/*!
- * type.js ${version} (https://github.com/yanhaijing/type.js)
- * API https://github.com/yanhaijing/type.js/blob/master/doc/api.md
- * Copyright 2017-${(new Date).getFullYear()} yanhaijing. All Rights Reserved
- * Licensed under MIT (https://github.com/yanhaijing/type.js/blob/master/LICENSE)
+ * type ${version} (https://github.com/jsmini/type)
+ * API https://github.com/jsmini/type/blob/master/doc/api.md
+ * Copyright 2017-${(new Date).getFullYear()} jsmini. All Rights Reserved
+ * Licensed under MIT (https://github.com/jsmini/type/blob/master/LICENSE)
  */
 `;
 

@@ -24,6 +24,10 @@
   "bugs": {
     "url": "https://github.com/jsmini/type/issues"
   },
+  "keywords": [
+    "type",
+    "typeof"
+  ],
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-preset-env": "1.6.1",

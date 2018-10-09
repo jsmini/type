@@ -4,13 +4,10 @@
 ## 兼容性
 单元测试保证支持如下环境：
 
-- Node 0.10+
-- Safari 6+ (Mac)
-- iOS 5+ Safari
-- Chrome 23+ (Windows, Mac, Android, iOS, Linux, Chrome OS)
-- Firefox 4+ (Windows, Mac, Android, Linux)
-- Internet Explorer 6+ (Windows, Windows Phone)
-- Opera 10+ (Windows, linux, Android)
+| IE   | CH   | FF   | SF   | OP   | IOS  | 安卓   | Node  |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- |
+| 6+   | 23+  | 4+   | 6+   | 10+  | 5+   | 2.3+ | 0.10+ |
+
 
 ## 目录介绍
 

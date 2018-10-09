@@ -45,6 +45,7 @@ describe('单元测试', function() {
         it('object', function() {
             expect(type({})).to.equal('object');
             expect(type((new Object()))).to.equal('object');
+            expect(type((Object.create(null)))).to.equal('object');
         });
 
         it('set', function() {
@@ -71,6 +72,7 @@ describe('单元测试', function() {
 
         it('class', function() {
             expect(type(class A {})).to.equal('function');
+            expect(type(new class A {})).to.equal('unknown');
         });
 
         it('regexp', function() {

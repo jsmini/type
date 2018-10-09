@@ -14,7 +14,7 @@ export function type(x) {
     let c;
     try {
         c = toString.call(x).slice(8, -1).toLowerCase();
-    } catch(exp) {
+    } catch(e) {
         return 'object';
     }
 
@@ -26,5 +26,15 @@ export function type(x) {
         return c;
     }
 
-    return 'unknown';
+    try {
+        // Object.create(null)
+        if (Object.getPrototypeOf(x) === null || x.__proto__ === null) {
+            return 'object';
+        }
+
+        return 'unknown';
+    } catch(e) {
+        // ie下无Object.getPrototypeOf
+        return 'unknown';
+    }
 }

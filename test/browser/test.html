@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function type1(x) { return typeof x }
+        function type2(x) { return Object.prototype.toString.call(x) }
+    </script>
+    <script>
+
+        const data = [
+            // 基础类型 除去 null 和 undefined
+            [1, Number(1), new Number(1)],
+            ['', String(''), new String('')],
+            [true, Boolean(true), new Boolean(true)],
+            [Symbol('s'), Symbol('s')],
+
+            // 复杂类型
+            [[], Array(1), new Array(1)],
+            [function () {}, () => {}, new Function('a', '')],
+            [{}, Object.create(null), Object.create({}), Object({}), new Object({})],
+            [/1/, new RegExp('1')],
+            [Date(), new Date('1')],
+        ]
+ 
+        for (let list of data) {
+            console.log(...list.map(d => type1(d)));
+            console.log(...list.map(d => type2(d)));
+        }
+    </script>
+</body>
+</html>

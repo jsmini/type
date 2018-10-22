@@ -68,6 +68,10 @@ describe('单元测试', function() {
             expect(type(function () {})).to.equal('function');
             expect(type(() => {})).to.equal('function');
             expect(type(new Function())).to.equal('function');
+
+            function B() {}
+            B.prototype.constructor = null;
+            expect(type(new B)).to.equal('unknown');
         });
 
         it('class', function() {

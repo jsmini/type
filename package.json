@@ -1,6 +1,6 @@
 {
   "name": "@jsmini/type",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "类型检测库，弥补typeof的问题",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",

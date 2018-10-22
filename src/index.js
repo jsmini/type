@@ -26,16 +26,26 @@ export function type(x) {
         return c;
     }
 
+    // Object.create(null)
     try {
-        // Object.create(null)
+        // __proto__ 部分早期firefox浏览器
         if (Object.getPrototypeOf(x) === null || x.__proto__ === null) {
             return 'object';
         }
-
-        // function A() {}; new A
-        return 'unknown';
     } catch(e) {
-        // ie下无Object.getPrototypeOf
-        return 'unknown';
+        // ie下无Object.getPrototypeOf会报错
     }
+
+    // function A() {}; new A
+    try {
+        const cname = x.constructor.name;
+
+        if (typeof cname === 'string') {
+            return cname;
+        }
+    } catch(e) {
+        // 无constructor
+    }
+
+    return 'unknown';
 }

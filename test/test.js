@@ -72,7 +72,7 @@ describe('单元测试', function() {
 
         it('class', function() {
             expect(type(class A {})).to.equal('function');
-            expect(type(new class A {})).to.equal('unknown');
+            expect(type(new class A {})).to.equal('A');
         });
 
         it('regexp', function() {

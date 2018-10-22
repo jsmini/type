@@ -47,5 +47,6 @@ export function type(x) {
         // 无constructor
     }
 
+    // function A() {}; A.prototype.constructor = null; new A
     return 'unknown';
 }

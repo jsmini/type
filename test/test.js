@@ -7,93 +7,122 @@ var type = require('../dist/index.js').type;
 describe('单元测试', function() {
     this.timeout(1000);
 
-    describe('基本类型', function() {
-        it('number', function() {
-            expect(type(1)).to.equal('number');
-            expect(type(1.1)).to.equal('number');
-            expect(type(Math.pow(2, 64))).to.equal('number');
+    var baseList = [
+        // undefined
+        { a: undefined, b: 'undefined' },
+
+        // null
+        { a: null, b: 'null' },
+
+        // number
+        { a: 1, b: 'number' },
+        { a: 1.1, b: 'number' },
+        { a: Math.pow(2, 64), b: 'number' },
+        { a: Number(1), b: 'number' },
+        { a: new Number(1), b: 'Number' },
+
+        // boolean
+        { a: true, b: 'boolean' },
+        { a: false, b: 'boolean' },
+        { a: Boolean(true), b: 'boolean' },
+        { a: new Boolean(true), b: 'Boolean' },
+
+        // string
+        { a: '123', b: 'string' },
+        { a: String(123), b: 'string' },
+        { a: new String(123), b: 'String' },
+
+        // symbol
+        { a: Symbol(), b: 'symbol' },
+    ];
+
+    function B() {}
+    B.prototype.constructor = null;
+
+    var refList = [
+        // array
+        { a: [], b: 'array'},
+        { a: Array(1), b: 'array'},
+        { a: new Array(1), b: 'array'},
+
+        // object
+        { a: {}, b: 'object'},
+        { a: Object({}), b: 'object'},
+        { a: new Object(), b: 'object'},
+        { a: Object.create({}), b: 'object'},
+        { a: Object.create(null), b: 'object'},
+
+        // set
+        { a: new Set(), b: 'set'},
+
+        // weakset
+        { a: new WeakSet(), b: 'weakset'},
+
+        // map
+        { a: new Map(), b: 'map'},
+
+        // weakmap
+        { a: new WeakMap(), b: 'weakmap'},
+
+        // function
+        { a: function () {}, b: 'function'},
+        { a: () => {}, b: 'function'},
+        { a: new Function(), b: 'function'},
+
+        // class
+        { a: class A {}, b: 'function'},
+        { a: new class A {}, b: 'A'},
+
+        // regexp
+        { a: /1/, b: 'regexp'},
+        { a: new RegExp, b: 'regexp'},
+
+        // date
+        { a: new Date(), b: 'date'},
+
+        // math
+        { a: Math, b: 'math'},
+
+        // promise
+        { a: new Promise(function () {}), b: 'promise'},
+
+        // unknown
+        { a: new B, b: 'unknown'},
+    ];
+
+    describe('非严格模式', function() {
+        it('基本类型', function() {
+            for (var i = 0; i < baseList.length; i++) {
+                var a = baseList[i].a;
+                var b = baseList[i].b;
+                expect(type(a)).to.equal(b.toLowerCase());
+            }
         });
 
-        it('boolean', function() {
-            expect(type(true)).to.equal('boolean');
-            expect(type(false)).to.equal('boolean');
-        });
-
-        it('string', function() {
-            expect(type('123')).to.equal('string');
-        });
-
-        it('undefined', function() {
-            expect(type()).to.equal('undefined');
-        });
-
-        it('null', function() {
-            expect(type(null)).to.equal('null');
-        });
-
-        it('symbol', function() {
-            expect(type(Symbol())).to.equal('symbol');
+        it('复杂类型', function() {
+            for (var i = 0; i < refList.length; i++) {
+                var a = refList[i].a;
+                var b = refList[i].b;
+                expect(type(a)).to.equal(b);
+            }
         });
     });
 
-    describe('引用类型', function() {
-        it('array', function() {
-            expect(type([])).to.equal('array');
-            expect(type(new Array())).to.equal('array');
+    describe('严格模式', function() {
+        it('基本类型', function() {
+            for (var i = 0; i < baseList.length; i++) {
+                var a = baseList[i].a;
+                var b = baseList[i].b;
+                expect(type(a, true)).to.equal(b);
+            }
         });
 
-        it('object', function() {
-            expect(type({})).to.equal('object');
-            expect(type((new Object()))).to.equal('object');
-            expect(type((Object.create(null)))).to.equal('object');
-        });
-
-        it('set', function() {
-            expect(type(new Set())).to.equal('set');
-        });
-
-        it('weakset', function() {
-            expect(type(new WeakSet())).to.equal('weakset');
-        });
-
-        it('map', function() {
-            expect(type(new Map())).to.equal('map');
-        });
-
-        it('weakmap', function() {
-            expect(type(new WeakMap())).to.equal('weakmap');
-        });
-
-        it('function', function() {
-            expect(type(function () {})).to.equal('function');
-            expect(type(() => {})).to.equal('function');
-            expect(type(new Function())).to.equal('function');
-
-            function B() {}
-            B.prototype.constructor = null;
-            expect(type(new B)).to.equal('unknown');
-        });
-
-        it('class', function() {
-            expect(type(class A {})).to.equal('function');
-            expect(type(new class A {})).to.equal('A');
-        });
-
-        it('regexp', function() {
-            expect(type(/1/)).to.equal('regexp');
-            expect(type(new RegExp)).to.equal('regexp');
-        });
-
-        it('date', function() {
-            expect(type(new Date())).to.equal('date');
-        });
-
-        it('math', function() {
-            expect(type(Math)).to.equal('math');
-        });
-
-        it('promise', function() {
-            expect(type(new Promise(function () {}))).to.equal('promise');
+        it('复杂类型', function() {
+            for (var i = 0; i < refList.length; i++) {
+                var a = refList[i].a;
+                var b = refList[i].b;
+                expect(type(a, true)).to.equal(b);
+            }
         });
     });
 });

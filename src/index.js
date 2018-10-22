@@ -1,29 +1,40 @@
 const toString = Object.prototype.toString;
 
-export function type(x) {
+export function type(x, strict = false) {
+    strict = !!strict;
+
+    // fix typeof null = object
     if(x === null){
         return 'null';
     }
 
     const t= typeof x;
 
+    // number string boolean undefined symbol
     if(t !== 'object'){
         return t;
     }
 
-    let c;
+    let cls;
+    let clsLow;
     try {
-        c = toString.call(x).slice(8, -1).toLowerCase();
+        cls = toString.call(x).slice(8, -1);
+        clsLow = cls.toLowerCase();
     } catch(e) {
+        // ie下的 activex对象
         return 'object';
     }
 
-    if(c !== 'object'){
-        return c;
+    if(clsLow !== 'object'){
+        // 区分 String() 和 new String()
+        if (strict && (clsLow === 'number' || clsLow === 'boolean' || clsLow === 'string')) {
+            return cls;
+        }
+        return clsLow;
     }
 
     if(x.constructor == Object){
-        return c;
+        return clsLow;
     }
 
     // Object.create(null)

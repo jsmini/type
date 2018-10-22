@@ -25,7 +25,8 @@ type.js借助内部的[class]来给绝大部分数据类型做出正确的类型
 ## type
 type函数的参数和返回类型入选：
 
-- @param x {任意类型} 带判断的参数
+- @param {*} x 带判断的参数
+- @param {boolean} [strict=false]  是否是严格模式，严格模式下将会有所不同
 - @return {string} 类型的字符串
 
 下面给出type和typeof的对比结果：
@@ -84,4 +85,36 @@ typeof Math // 'object'
 
 type(new Promise(function () {})) // 'promise'
 typeof new Promise(function () {}) // 'object'
+```
+
+大部分情况下不需要区分原始值和对象值，但对于布尔类型会有区别
+
+```js
+!!false // false
+!!new Boolean(false) // true
+```
+
+type通过引入严格模式，来区分基本类型的原始值和对象值
+
+```js
+// number
+type(1); // number
+type(new Number(1)); // number
+
+type(1, true); // number
+type(new Number(1, true)); // Number
+
+// string
+type(''); // string
+type(new String('')); // string
+
+type('', true); // string
+type(new String('', true)); // String
+
+// boolean
+type(true); // boolean
+type(new Boolean(true)); // boolean
+
+type(true, true); // boolean
+type(new Boolean(true, true)); // Boolean
 ```

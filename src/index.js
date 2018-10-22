@@ -32,6 +32,7 @@ export function type(x) {
             return 'object';
         }
 
+        // function A() {}; new A
         return 'unknown';
     } catch(e) {
         // ie下无Object.getPrototypeOf

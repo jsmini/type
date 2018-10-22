@@ -11,6 +11,12 @@
         console.log(jsmini_type.type(Object.create(null)));
         console.log(jsmini_type.type(new Boolean(false)));
         console.log(jsmini_type.type(false));
+
+        function A() {
+
+        }
+
+        console.log(jsmini_type.type(new A))
     </script>
 </body>
 </html>

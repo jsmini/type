@@ -3,24 +3,25 @@ js的typeof有缺陷，对简单数据类型支持有bug，比如对null支持�
 
 type.js借助内部的[class]来给绝大部分数据类型做出正确的类型判断，支持的部分类型如下：
 
-- number
-- boolean
-- string
-- undefined
-- null
-- symbol
-- array
-- object
-- set
-- weakset
-- map
-- weakmap
-- function
-- class
-- regexp
-- date
-- math
-- promise
+- number, boolean, string, undefined, null, symbol
+- array, object, set, weakset, map, weakmap
+- function, class
+- regexp, date, math, promise
+
+常见问题，不同方式结果对比
+
+| 值           | typeof | [class] | type    | type+strict |
+| ----------- | ------ | ------- | ------- | ----------- |
+| null        | object | Null    | null    | null        |
+| new String  | object | String  | string  | String      |
+| new Number  | object | Number  | number  | Number      |
+| new Boolean | object | Boolean | boolean | Boolean     |
+| []          | object | Array   | array   | array       |
+| new Set     | object | Set     | set     | set         |
+| /1/         | object | Regexp  | regexp  | regexp      |
+| new Date()  | object | Date    | date    | date        |
+| new Promise | object | Promise | promise | promise     |
+| new A       | object | Object  | A       | A           |
 
 ## type
 type函数的参数和返回类型入选：

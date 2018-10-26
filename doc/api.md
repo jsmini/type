@@ -13,14 +13,10 @@ type.js借助内部的[class]来给绝大部分数据类型做出正确的类型
 | 值           | typeof | [class] | type    | type+strict |
 | ----------- | ------ | ------- | ------- | ----------- |
 | null        | object | Null    | null    | null        |
-| new String  | object | String  | string  | String      |
-| new Number  | object | Number  | number  | Number      |
 | new Boolean | object | Boolean | boolean | Boolean     |
 | []          | object | Array   | array   | array       |
 | new Set     | object | Set     | set     | set         |
 | /1/         | object | Regexp  | regexp  | regexp      |
-| new Date()  | object | Date    | date    | date        |
-| new Promise | object | Promise | promise | promise     |
 | new A       | object | Object  | A       | A           |
 
 ## type

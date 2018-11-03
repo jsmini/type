@@ -119,3 +119,5 @@ $ npm publish --access=public
 [TODO.md](https://github.com/jsmini/type/blob/master/TODO.md)
 
 ## 谁在使用
+
+- [is](https://github.com/jsmini/is)

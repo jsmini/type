@@ -121,3 +121,7 @@ $ npm publish --access=public
 ## 谁在使用
 
 - [is](https://github.com/jsmini/is)
+- [querystring](https://github.com/jsmini/querystring)
+- [clone](https://github.com/jsmini/clone)
+- [react-compare](https://github.com/fXy-during/react-compare)
+- [z](https://github.com/PinghuaZhuang/z)

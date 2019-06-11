@@ -1,4 +1,4 @@
-# [type](https://github.com/jsmini/type) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.7.0-orange.svg)](https://www.npmjs.com/package/@jsmini/type) [![Build Status](https://travis-ci.org/jsmini/type.svg?branch=master)](https://travis-ci.org/jsmini/type) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/type/blob/master/LICENSE)
+# [type](https://github.com/jsmini/type) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.8.0-orange.svg)](https://www.npmjs.com/package/@jsmini/type) [![Build Status](https://travis-ci.org/jsmini/type.svg?branch=master)](https://travis-ci.org/jsmini/type) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/type/blob/master/LICENSE)
 
 type checking library. fixed the problem of typeof.  support IE6.
 

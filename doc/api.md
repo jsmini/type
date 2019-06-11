@@ -10,7 +10,7 @@ type.js借助内部的[class]来给绝大部分数据类型做出正确的类型
 
 常见问题，不同方式结果对比
 
-| 值           | typeof | [class] | type    | type+strict |
+| 值          | typeof | [class] | type    | type+strict |
 | ----------- | ------ | ------- | ------- | ----------- |
 | null        | object | Null    | null    | null        |
 | new Boolean | object | Boolean | boolean | Boolean     |
@@ -18,6 +18,7 @@ type.js借助内部的[class]来给绝大部分数据类型做出正确的类型
 | new Set     | object | Set     | set     | set         |
 | /1/         | object | Regexp  | regexp  | regexp      |
 | new A       | object | Object  | A       | A           |
+| NaN         | number | Number  | number  | nan         |
 
 ## type
 type函数的参数和返回类型入选：
@@ -97,9 +98,13 @@ type通过引入严格模式，来区分基本类型的原始值和对象值
 // number
 type(1); // number
 type(new Number(1)); // number
+type(NaN) // number
+type(new Number(NaN)) // Number
 
 type(1, true); // number
 type(new Number(1, true)); // Number
+type(NaN, true) // nan
+type(new Number(NaN, true)) // NaN
 
 // string
 type(''); // string

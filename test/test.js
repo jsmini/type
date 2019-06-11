@@ -115,6 +115,8 @@ describe('单元测试', function() {
                 var b = baseList[i].b;
                 expect(type(a, true)).to.equal(b);
             }
+
+            expect(type(NaN, true)).to.equal('nan');
         });
 
         it('复杂类型', function() {
@@ -123,6 +125,8 @@ describe('单元测试', function() {
                 var b = refList[i].b;
                 expect(type(a, true)).to.equal(b);
             }
+
+            expect(type(new Number(NaN), true)).to.equal('NaN');
         });
     });
 });

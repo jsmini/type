@@ -8,7 +8,12 @@ export function type(x, strict = false) {
         return 'null';
     }
 
-    const t= typeof x;
+    const t = typeof x;
+
+    // 严格模式 区分NaN和number
+    if (strict && t === 'number' && isNaN(x)) {
+        return 'nan';
+    }
 
     // number string boolean undefined symbol
     if(t !== 'object'){
@@ -26,9 +31,15 @@ export function type(x, strict = false) {
     }
 
     if(clsLow !== 'object'){
-        // 区分 String() 和 new String()
-        if (strict && (clsLow === 'number' || clsLow === 'boolean' || clsLow === 'string')) {
-            return cls;
+        if (strict) {
+            // 区分NaN和new Number
+            if (clsLow === 'number' && isNaN(x)) {
+                return 'NaN';
+            }
+            // 区分 String() 和 new String()
+            if ((clsLow === 'number' || clsLow === 'boolean' || clsLow === 'string')) {
+                return cls;
+            }
         }
         return clsLow;
     }

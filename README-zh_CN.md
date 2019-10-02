@@ -1,4 +1,12 @@
-# [type](https://github.com/jsmini/type) [![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base) [![npm](https://img.shields.io/badge/npm-0.8.0-orange.svg)](https://www.npmjs.com/package/@jsmini/type) [![Build Status](https://travis-ci.org/jsmini/type.svg?branch=master)](https://travis-ci.org/jsmini/type) [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/type/blob/master/LICENSE)
+# [type](https://github.com/jsmini/type)
+
+[![](https://img.shields.io/badge/Powered%20by-jslib%20base-brightgreen.svg)](https://github.com/yanhaijing/jslib-base)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jsmini/type/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/jsmini/type.svg?branch=master)](https://travis-ci.org/jsmini/type)
+[![npm](https://img.shields.io/badge/npm-0.8.0-orange.svg)](https://www.npmjs.com/package/@jsmini/type)
+[![NPM downloads](http://img.shields.io/npm/dm/@jsmini/type.svg?style=flat-square)](http://www.npmtrends.com/@jsmini/type)
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/jsmini/type.svg)](http://isitmaintained.com/project/jsmini/type "Percentage of issues still open")
+
 类型检测库，弥补typeof的问题，原生兼容IE6
 
 [English](./README.md) | 简体中文
@@ -104,15 +112,8 @@ $ npm run release
 将新版本发布到npm
 
 ```bash
-$ npm publish --access=public
+$ npm publish
 ```
-
-可能需要你自己修改的地方如下：
-
-- README.md 中的信息
-- package.json 中的信息
-- config/rollup.js 中的信息
-- test/browser/index.html 中的仓库名称
 
 ## 更新日志
 [CHANGELOG.md](https://github.com/jsmini/type/blob/master/CHANGELOG.md)

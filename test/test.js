@@ -2,7 +2,7 @@
 
 var expect = require('expect.js');
 
-var type = require('../dist/index.js').type;
+var type = require('../src/index.js').type;
 
 describe('单元测试', function() {
     this.timeout(1000);

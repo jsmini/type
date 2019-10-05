@@ -57,7 +57,6 @@
     "source-map-support": "0.5.9"
   },
   "dependencies": {
-    "@jsmini/type": "^0.8.0",
     "@babel/runtime": "^7.1.2"
   },
   "files": [

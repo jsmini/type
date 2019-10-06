@@ -33,6 +33,7 @@
     "typeof"
   ],
   "devDependencies": {
+    "@js-lib/cli": "^1.4.0",
     "babel-core": "6.26.0",
     "babel-preset-env": "1.6.1",
     "eslint": "^5.15.1",

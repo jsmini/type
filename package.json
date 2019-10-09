@@ -1,6 +1,6 @@
 {
   "name": "@jsmini/type",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "类型检测库，弥补typeof的问题",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.esm.js",
@@ -33,7 +33,7 @@
     "typeof"
   ],
   "devDependencies": {
-    "@js-lib/cli": "^1.4.0",
+    "@js-lib/cli": "^1.4.2",
     "babel-core": "6.26.0",
     "babel-preset-env": "1.6.1",
     "eslint": "^5.15.1",
@@ -61,10 +61,14 @@
     "@babel/runtime": "^7.1.2"
   },
   "files": [
-    "/dist"
+    "/dist",
+    "*.d.ts"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
   }
 }

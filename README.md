@@ -9,8 +9,6 @@
 
 type checking library. fixed the problem of typeof. support IE6.
 
-类型检测库，弥补typeof的问题，原生兼容IE6
-
 English | [简体中文](./README-zh_CN.md)
 
 ## Environment Support

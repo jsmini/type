@@ -1,7 +1,7 @@
 {
   "name": "type",
   "npmname": "@jsmini/type",
+  "umdname": "jsmini_type",
   "username": "jsmini",
-  "type": "js",
-  "lang": "zh"
+  "type": "js"
 }
